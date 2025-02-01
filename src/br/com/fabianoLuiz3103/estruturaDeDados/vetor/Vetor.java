@@ -38,6 +38,18 @@ public class Vetor {
 
     }
 
+    //sobrecarga
+    //Busca sequencial
+    //Retorna o indice
+    public int busca(String elemento) {
+       for(int i = 0; i < tamanho; i++){
+           if(this.elementos[i].equals(elemento)){
+               return i;
+           }
+       }
+       return -1;
+    }
+
     public int tamanho(){
         return this.tamanho;
     }
