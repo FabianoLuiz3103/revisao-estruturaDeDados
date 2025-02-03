@@ -1,8 +1,10 @@
 package br.com.fabianoLuiz3103.exercicios.exercicio06;
 
+import java.util.Objects;
+
 public class Contato {
 
-    private static int contador;
+    protected static int contador;
     private int id;
     private String nome;
     private String email;
@@ -19,6 +21,11 @@ public class Contato {
         this.telefone = telefone;
         //contador++ faz o valor ser atribuido e depois incrementado então vai de [0, 29] para 30 contatos
         this.id = ++contador;
+    }
+
+    public Contato(String email, String telefone){
+        this.email = email;
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -55,5 +62,18 @@ public class Contato {
         sb.append("\n- EMAIL: " + this.email);
         sb.append("\n- TELEFONE: " + this.telefone);
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contato contato = (Contato) o;
+        return Objects.equals(email, contato.email) && Objects.equals(telefone, contato.telefone);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(email, telefone);
     }
 }
