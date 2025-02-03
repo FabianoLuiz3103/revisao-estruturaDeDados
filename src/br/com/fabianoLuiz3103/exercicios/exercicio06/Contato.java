@@ -9,14 +9,16 @@ public class Contato {
     private String telefone;
 
     public Contato(){
-        this.id = contador++;
+        //contador++ faz o valor ser atribuido e depois incrementado então vai de [0, 29] para 30 contatos
+        this.id = ++contador;
     }
 
     public Contato(String nome, String email, String telefone) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
-        this.id = contador++;
+        //contador++ faz o valor ser atribuido e depois incrementado então vai de [0, 29] para 30 contatos
+        this.id = ++contador;
     }
 
     public String getNome() {
