@@ -48,6 +48,7 @@ public class Contato {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("\n\n------------------");
         sb.append("\n *** CONTATO #" + id);
         sb.append(" *** ");
         sb.append("\n- NONE: " + this.nome);
