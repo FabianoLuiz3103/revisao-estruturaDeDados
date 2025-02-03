@@ -1,5 +1,10 @@
 package br.com.fabianoLuiz3103.estruturaDeDados.vetor;
 
+/**
+ * Criando a classe dessa forma eu posso misturar objetos nela
+ * então posso ter um vetor
+ * [1, 9.5, "baladinha", Contato]
+ */
 public class VetorObjetos {
 
     private Object[] elementos;
