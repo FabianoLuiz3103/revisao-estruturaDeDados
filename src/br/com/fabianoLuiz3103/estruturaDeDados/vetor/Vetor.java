@@ -1,6 +1,5 @@
 package br.com.fabianoLuiz3103.estruturaDeDados.vetor;
 
-import java.util.Arrays;
 
 public class Vetor {
 
@@ -28,6 +27,19 @@ public class Vetor {
         } else{
             throw new Exception("\n\t\tErro! O vetor já está cheio!");
         }
+    }
+
+    public void adiciona(String elemento, int posicao) throws IllegalArgumentException{
+        if(!(posicao >= 0 && posicao < tamanho)){
+            throw new IllegalArgumentException("Posição inválida! ");
+        }
+        if(this.elementos[posicao] != null){
+            for(int i = tamanho-1; i >= posicao; i--){
+                this.elementos[i+1] = this.elementos[i];
+            }
+        }
+        this.elementos[posicao]=elemento;
+        tamanho++;
     }
 
     public String busca(int posicao) throws IllegalArgumentException{
