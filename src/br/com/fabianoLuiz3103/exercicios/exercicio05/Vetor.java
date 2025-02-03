@@ -117,7 +117,7 @@ public class Vetor<T> {
         todos os elementos anteriores não serão mais referênciados
         Zerando o tamanho lógico
          */
-        this.elementos = (T[]) new Object[this.elementos.length];
+        this.elementos = (T[]) new Object[this.elementos.length]; //do mesmo tamanho e tipo
         this.tamanho = 0;
     }
 
