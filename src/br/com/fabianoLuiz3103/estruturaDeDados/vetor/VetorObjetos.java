@@ -1,9 +1,11 @@
 package br.com.fabianoLuiz3103.estruturaDeDados.vetor;
 
 /**
- * Criando a classe dessa forma eu posso misturar objetos nela
+ * Criando a classe dessa forma eu posso misturar objetos nela por herdarem de Object
  * então posso ter um vetor
  * [1, 9.5, "baladinha", Contato]
+ *
+ * Os elementos do vetor devem ser do mesmo tipo!! -> É definição do java
  */
 public class VetorObjetos {
 
