@@ -51,4 +51,14 @@ public class Exercicio05 {
         }
         return (pilha.isEmpty());
     }
+    /*
+    A pilha está recebendo só os símbolos de abertura, quando um símbolo de
+    fechamento é recebido, o topo da pilha é desempilhado e é verificado se o simbolo
+    do topo é semelhante ao símbolo de fechamento atráves do indexOf deles, se forem diferentes
+    a expresão é inválida, mesmo tendo mais símbolos para serem lidos na expresão
+    se os símbolos forem iguais o for continua verificando.
+    se o for foi percorrido por completo a lista vai estar vazia se for válido ou não vai estar vazia
+    se for inválido, por que na expressão ((A+B) o método de desempilha só é chamado uma vez, porque
+    só tem um símbolo de fechamento, então é inválido
+     */
 }
