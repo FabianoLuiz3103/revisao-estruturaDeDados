@@ -10,12 +10,13 @@ public class Teste {
         Por padrão inicia com 10, antes de aumentar a capacidade
          */
         Pilha<Integer> pilha = new Pilha<>();
-
-        for(int i = 1; i <= 15; i++){
-            pilha.empilha(i);
+        pilha.empilha(1);
+        pilha.empilha(2);
+        try{
+            System.out.println(pilha.topo());
+        }catch (Exception e){
+            System.out.println("A pilha está vazia");
         }
-
-        System.out.println(pilha);
 
     }
 }
