@@ -7,6 +7,7 @@ public abstract class EstruturaEstatica<T>{
 
     public EstruturaEstatica(){
         this(10); //começa com 10 por padrão
+        //está chamando o construtor abaixo
     }
 
     public EstruturaEstatica(int capacidade){
