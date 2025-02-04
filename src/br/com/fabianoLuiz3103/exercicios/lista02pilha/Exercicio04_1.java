@@ -2,7 +2,6 @@ package br.com.fabianoLuiz3103.exercicios.lista02pilha;
 
 import br.com.fabianoLuiz3103.estruturaDeDados.pilha.Pilha;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 /**
