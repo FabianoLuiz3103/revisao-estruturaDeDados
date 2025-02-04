@@ -27,9 +27,27 @@ public class Pilha<T> extends EstruturaEstatica<T> {
     }
 
     //peek()
-    public T topo() throws EmptyStackException{
+    public T topo() throws EmptyStackException{ //exceção não verificadas não é obrigatório o uso de throws e try-cath
         if(!super.isEmpty()){
             return super.elementos[super.tamanho-1];
+        }
+        throw new EmptyStackException();
+    }
+
+    //pop() --> opção 1
+//    public T desempilha(){ //exemplo sem throws
+//        if(!super.isEmpty()){
+//            T e = this.topo();
+//            super.remove(super.tamanho-1);
+//            return e;
+//        }
+//        throw new EmptyStackException();
+//    }
+
+    //pop() --> opção 2 -> mais simples
+    public T desempilha(){
+        if(!super.isEmpty()){
+            return super.elementos[--super.tamanho]; //decrementa primeiro
         }
         throw new EmptyStackException();
     }
