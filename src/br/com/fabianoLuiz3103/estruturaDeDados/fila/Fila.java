@@ -18,5 +18,13 @@ public class Fila <T> extends EstruturaEstatica<T> {
     }
 
 
+    public void remove(){
+        try{
+            super.remove(0);
+        }catch (IllegalArgumentException e){
+            System.out.println("\n\tA fila está vazia!");
+        }
+    }
+
 
 }
