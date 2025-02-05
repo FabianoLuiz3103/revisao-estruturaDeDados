@@ -65,7 +65,7 @@ public class VetorObjetos {
     }
 
     public void remove(int posicao) throws IllegalArgumentException{
-        if(!(posicao >= 0 && posicao < tamanho)){
+        if(!(posicao >= 0 && posicao <= tamanho)){
             throw new IllegalArgumentException("Posição inválida! ");
         }
         for(int i = posicao; i < this.tamanho-1; i++){
