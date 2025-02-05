@@ -29,17 +29,21 @@ public class Fila <T> extends EstruturaEstatica<T> {
     }
 
     public T primeiroDaFila(){
-        if(super.isEmpty()){
-            throw new NoSuchElementException("\n\tA fila está vazia!");
-        }
-        return super.elementos[0];
+       try{
+           return super.elementos[0];
+       }catch (ArrayIndexOutOfBoundsException e){
+           System.out.println("\n\tA fila está vazia");
+           return null;
+       }
     }
 
     public T ultimoDaFila(){
-        if(super.isEmpty()){
-            throw new NoSuchElementException("\n\tA fila está vazia!");
+        try{
+            return super.elementos[super.tamanho-1];
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("\n\tA fila está vazia");
+            return null;
         }
-        return super.elementos[super.tamanho-1];
     }
 
 }
