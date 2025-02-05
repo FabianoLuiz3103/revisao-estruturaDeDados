@@ -26,7 +26,7 @@ public abstract class EstruturaEstatica<T>{
     }
 
     protected void adiciona(T elemento, int posicao) throws IllegalArgumentException{
-        if(!(posicao >= 0 && posicao < tamanho)){
+        if(!(posicao >= 0 && posicao <= tamanho)){
             throw new IllegalArgumentException("Posição inválida! ");
         }
         this.aumentarCapacidade();
