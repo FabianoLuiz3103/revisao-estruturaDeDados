@@ -7,6 +7,9 @@ package br.com.fabianoLuiz3103.estruturaDeDados.fila;
  obj1 > obj2 --> compareTo retorna >0
  obj1 < obj2 --> compareTo retorna < 0
  obj1 == obj2 --> compareTo retorna =0
+
+ A classe que eu criar tem que implements a interface Comparable e implementar o método compareTo
+ nele eu posso definir se um objeto vai ser maior que o outro pela idade, salário, etc
  */
 public class FilaComPrioridade<T> extends Fila<T> {
 
