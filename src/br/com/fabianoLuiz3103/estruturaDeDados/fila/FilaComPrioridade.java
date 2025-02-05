@@ -13,12 +13,27 @@ package br.com.fabianoLuiz3103.estruturaDeDados.fila;
  */
 public class FilaComPrioridade<T> extends Fila<T> {
 
+    private boolean minHeap;
+
+    public FilaComPrioridade(){
+        this.minHeap = true; //default
+    }
+
+    public FilaComPrioridade(boolean minHeap) {
+        this.minHeap = minHeap;
+    }
+
+    public FilaComPrioridade(int capacidade, boolean minHeap) {
+        super(capacidade);
+        this.minHeap = minHeap;
+    }
 
     public void adiciona(T elemento) {
         Comparable<T> chave = (Comparable<T>) elemento;
         int i;
         for(i = 0; i < super.tamanho; i++){
-            if(chave.compareTo(this.elementos[i])<0){
+            if(minHeap ? chave.compareTo(this.elementos[i])<0 :
+                    chave.compareTo(this.elementos[i])>0){
                 break;
             }
         }
