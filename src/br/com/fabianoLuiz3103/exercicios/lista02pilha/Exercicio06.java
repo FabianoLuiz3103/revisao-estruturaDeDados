@@ -18,7 +18,7 @@ public class Exercicio06 {
         Scanner scanner = new Scanner(System.in);
         double valor = lerNumero(scanner);
         if(isInteiro(valor)){
-            System.out.println("\n"+valor + " em binário fica: " + parteInteiraParaBinario((int)valor));
+            System.out.println("\n"+valor + " em binário fica: " + parteInteiraParaQualquerBase((int)valor, 2));
             System.out.println("\n"+valor + " em octal fica: " + parteInteiraParaQualquerBase((int)valor,8));
             System.out.println("\n"+valor + " em hex fica: " + parteInteiraParaQualquerBase((int)valor, 16));
         }else{
