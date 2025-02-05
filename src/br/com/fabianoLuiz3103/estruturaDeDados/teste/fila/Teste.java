@@ -17,7 +17,7 @@ public class Teste {
         System.out.println(fila.ultimoDaFila());
         System.out.println(fila.isEmpty());
 
-        fila.remove();
+        System.out.println("Elemento removido da fila: " + fila.remove());
         System.out.println(fila);
         System.out.println(fila.primeiroDaFila());
         System.out.println(fila.ultimoDaFila());
