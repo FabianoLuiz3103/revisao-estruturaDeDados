@@ -2,6 +2,8 @@ package br.com.fabianoLuiz3103.estruturaDeDados.fila;
 
 import br.com.fabianoLuiz3103.estruturaDeDados.estruturaEstatica.EstruturaEstatica;
 
+import java.util.NoSuchElementException;
+
 
 public class Fila <T> extends EstruturaEstatica<T> {
 
@@ -27,10 +29,16 @@ public class Fila <T> extends EstruturaEstatica<T> {
     }
 
     public T primeiroDaFila(){
+        if(super.isEmpty()){
+            throw new NoSuchElementException("\n\tA fila está vazia!");
+        }
         return super.elementos[0];
     }
 
     public T ultimoDaFila(){
+        if(super.isEmpty()){
+            throw new NoSuchElementException("\n\tA fila está vazia!");
+        }
         return super.elementos[super.tamanho-1];
     }
 
