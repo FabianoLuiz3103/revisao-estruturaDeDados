@@ -26,5 +26,12 @@ public class Fila <T> extends EstruturaEstatica<T> {
         }
     }
 
+    public T primeiroDaFila(){
+        return super.elementos[0];
+    }
+
+    public T ultimoDaFila(){
+        return super.elementos[super.tamanho-1];
+    }
 
 }
