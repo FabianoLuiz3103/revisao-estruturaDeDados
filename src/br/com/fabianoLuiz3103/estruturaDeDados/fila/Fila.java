@@ -2,6 +2,7 @@ package br.com.fabianoLuiz3103.estruturaDeDados.fila;
 
 import br.com.fabianoLuiz3103.estruturaDeDados.estruturaEstatica.EstruturaEstatica;
 
+import javax.print.DocFlavor;
 import java.util.NoSuchElementException;
 
 
@@ -20,30 +21,38 @@ public class Fila <T> extends EstruturaEstatica<T> {
     }
 
 
-    public void remove(){
+    public T remove(){
+        final int POS = 0;
+        T elemento = null;
         try{
-            super.remove(0);
+            elemento = super.elementos[POS];
+            super.remove(POS);
         }catch (IllegalArgumentException e){
             System.out.println("\n\tA fila está vazia!");
         }
+        return elemento;
     }
 
     public T primeiroDaFila(){
+        final int POS = 0;
+        T elemento = null;
        try{
-           return super.elementos[0];
+           elemento = super.elementos[POS];
        }catch (ArrayIndexOutOfBoundsException e){
            System.out.println("\n\tA fila está vazia");
-           return null;
        }
+       return elemento;
     }
 
     public T ultimoDaFila(){
+        final int POS = super.tamanho-1;
+        T elemento = null;
         try{
-            return super.elementos[super.tamanho-1];
+            elemento = super.elementos[POS];
         }catch (ArrayIndexOutOfBoundsException e){
             System.out.println("\n\tA fila está vazia");
-            return null;
         }
+        return elemento;
     }
 
 }
