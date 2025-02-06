@@ -63,11 +63,22 @@ public class ListaEncadeada<T> {
         this.tamanho = 0;
     }
 
+    private No<T> buscaPorPosicao(int posicao){
+
+        if(!(posicao >= 0 && posicao < this.tamanho)){
+           throw new IllegalArgumentException("\nPosição inválida! ");
+        }
+        No<T> atual = this.inicio;
+        for(int i =0; i < posicao; i++){
+            atual = atual.getProximo();
+        }
+        return atual;
+    }
+
 
     //busca por posição - retorna só o elemento, não o nó inteiro
     public T busca(int posicao){
-
-        return null;
+        return this.buscaPorPosicao(posicao).getElemento();
     }
 
     //== faz comparação de referência

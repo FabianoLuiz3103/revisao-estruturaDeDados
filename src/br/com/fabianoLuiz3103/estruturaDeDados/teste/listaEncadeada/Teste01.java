@@ -15,8 +15,11 @@ public class Teste01 {
         System.out.println(listaEncadeada.getTamanho());
 
         System.out.println(listaEncadeada);
-        listaEncadeada.limpa();
+       // listaEncadeada.limpa();
         System.out.println(listaEncadeada);
+
+       int index = listaEncadeada.busca(Integer.valueOf(4));
+       int i = listaEncadeada.busca(-1);
 
 
     }
