@@ -11,6 +11,9 @@ package br.com.fabianoLuiz3103.estruturaDeDados.listaEncadeada;
  *            ini -> A -> B -> null
  *            fim -> B -> null
  *            inicio e fim são variáveis que armazenam referência p/ cada nó
+ *
+ *            se por acidente o inicio for atribuido como null, todas as outras referÊncias (nós)
+ *            são perdidos na memória -> é uma forma bem simples de limpar a lista -> null para o último tb
  */
 public class ListaEncadeada<T> {
 
@@ -33,6 +36,17 @@ public class ListaEncadeada<T> {
     public int getTamanho(){
         return this.tamanho;
     }
+
+    //1º forma de limpar:
+
+    public void limpa(){
+        this.inicio = null;
+        this.ultimo = null;
+        this.tamanho = 0;
+    }
+
+
+
 
     //[1,2,3,4]
     @Override
