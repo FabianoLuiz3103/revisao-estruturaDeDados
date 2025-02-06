@@ -42,10 +42,20 @@ public class ListaEncadeada<T> {
         }
         StringBuilder sb = new StringBuilder();
         No<T> atual = this.inicio; //primeiro elemento
-        sb.append("[").append(atual.getElemento()).append(atual.getProximo()!=null?",":"");
-        while (atual.getProximo()!=null){
-            atual = atual.getProximo();
+//        sb.append("[").append(atual.getElemento()).append(atual.getProximo()!=null?",":"");
+//        while (atual.getProximo()!=null){
+//            atual = atual.getProximo();
+//            sb.append(atual.getElemento()).append(atual.getProximo()!=null?",":"");
+//        }
+//        sb.append("].");
+
+        //[0, tamanho-1]
+        //tamanho-1.prox é o último elemento
+        //tamanho é o último elemento, se ele é o último aponta para null
+        sb.append("[");
+        for(int i = 0; i < this.tamanho; i++){
             sb.append(atual.getElemento()).append(atual.getProximo()!=null?",":"");
+            atual = atual.getProximo();
         }
         sb.append("].");
         return sb.toString();
