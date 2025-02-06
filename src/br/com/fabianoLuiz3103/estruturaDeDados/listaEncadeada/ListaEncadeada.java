@@ -20,6 +20,7 @@ public class ListaEncadeada<T> {
     private No<T> inicio;
     private No<T> ultimo;
     private int tamanho;
+    private final int NAO_ENCONTRADO = -1;
 
     public void adiciona(T elemento){
         No<T> celula = new No<>(elemento); //inicio apontando para o primeiro nó
@@ -63,7 +64,28 @@ public class ListaEncadeada<T> {
     }
 
 
+    //busca por posição - retorna só o elemento, não o nó inteiro
+    public T busca(int posicao){
 
+        return null;
+    }
+
+    //== faz comparação de referência
+    //compareTo compara a ordem entre 2 objetos
+    //equals verifica se 2 objetos são iguais
+    public int busca(T elemento){
+        No<T> atual = this.inicio;
+        int posicao = 0;
+        while (atual!=null){
+
+            if(atual.getElemento().equals(elemento)){
+                return posicao;
+            }
+            posicao++;
+            atual = atual.getProximo();
+        }
+        return NAO_ENCONTRADO;
+    }
 
     //[1,2,3,4]
     @Override
