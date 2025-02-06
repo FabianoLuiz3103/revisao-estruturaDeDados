@@ -38,8 +38,25 @@ public class ListaEncadeada<T> {
     }
 
     //1º forma de limpar:
-
+/*
     public void limpa(){
+        this.inicio = null;
+        this.ultimo = null;
+        this.tamanho = 0;
+    }
+*/
+
+    //2º forma de limpar - facilita para o coletor de lixo do java
+    //forma mais otimizada
+    public void limpa(){
+
+        for(No<T> atual = this.inicio; atual!=null;){
+            No<T> proximo = atual.getProximo();
+            atual.setElemento(null);
+            atual.setProximo(null);
+            atual = proximo;
+        }
+
         this.inicio = null;
         this.ultimo = null;
         this.tamanho = 0;
