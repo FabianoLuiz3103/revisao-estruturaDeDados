@@ -14,7 +14,12 @@ public class Teste02 {
 
         System.out.println(lista);
 
-        lista.adiciona(5,"B");
+        lista.adiciona(1,"B");
+        System.out.println(lista);
+
+        System.out.println(lista.removeInicio());
+        System.out.println(lista);
+        System.out.println(lista.removeInicio());
         System.out.println(lista);
     }
 }
