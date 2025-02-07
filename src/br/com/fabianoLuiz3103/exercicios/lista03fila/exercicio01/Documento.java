@@ -1,4 +1,4 @@
-package br.com.fabianoLuiz3103.exercicios.lista03lista.exercicio01;
+package br.com.fabianoLuiz3103.exercicios.lista03fila.exercicio01;
 
 public class Documento implements Comparable<Documento> {
 
