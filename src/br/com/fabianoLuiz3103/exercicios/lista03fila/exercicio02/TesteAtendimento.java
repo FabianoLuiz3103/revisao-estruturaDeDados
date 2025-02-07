@@ -1,10 +1,9 @@
-package br.com.fabianoLuiz3103.exercicios.lista03lista.exercicio02;
+package br.com.fabianoLuiz3103.exercicios.lista03fila.exercicio02;
 
 import br.com.fabianoLuiz3103.estruturaDeDados.fila.Fila;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.Set;
 
 public class TesteAtendimento {
     private static int MAX_PRIORIDADE = 3;

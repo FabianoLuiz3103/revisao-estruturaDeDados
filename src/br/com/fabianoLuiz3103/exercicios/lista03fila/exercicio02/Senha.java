@@ -1,4 +1,4 @@
-package br.com.fabianoLuiz3103.exercicios.lista03lista.exercicio02;
+package br.com.fabianoLuiz3103.exercicios.lista03fila.exercicio02;
 
 public class Senha{
 
