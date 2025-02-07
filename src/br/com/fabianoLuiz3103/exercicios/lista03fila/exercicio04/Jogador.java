@@ -1,4 +1,4 @@
-package br.com.fabianoLuiz3103.exercicios.lista03lista.exercicio04;
+package br.com.fabianoLuiz3103.exercicios.lista03fila.exercicio04;
 
 public class Jogador {
 
