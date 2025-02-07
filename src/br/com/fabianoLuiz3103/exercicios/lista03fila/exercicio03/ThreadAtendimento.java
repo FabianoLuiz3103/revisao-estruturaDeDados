@@ -1,4 +1,4 @@
-package br.com.fabianoLuiz3103.exercicios.lista03lista.exercicio03;
+package br.com.fabianoLuiz3103.exercicios.lista03fila.exercicio03;
 
 import br.com.fabianoLuiz3103.estruturaDeDados.fila.FilaComPrioridade;
 
