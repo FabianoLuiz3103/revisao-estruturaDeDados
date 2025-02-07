@@ -1,5 +1,7 @@
 package br.com.fabianoLuiz3103.estruturaDeDados.listaEncadeada;
 
+import java.util.NoSuchElementException;
+
 /**
  *  O nó que era o último antes da inserção agora aponta para um novo
  *            nó
@@ -60,6 +62,17 @@ public class ListaEncadeada<T> {
            noAnterior.setProximo(novoNo);
            this.tamanho++;
        }
+    }
+
+    public T removeInicio(){
+        if(this.tamanho == 0){
+            throw new NoSuchElementException("Lista vazia!");
+        }
+        T removido = this.inicio.getElemento();
+        this.inicio = this.inicio.getProximo(); //se tiver um elemento o getProximo já retorna null
+        this.tamanho--;
+        if(this.tamanho==0){this.ultimo = null;} // se tiver só um elemento na lista, tem que fazer isso para o último não ficar apontando
+        return removido;
     }
 
     public int getTamanho(){
