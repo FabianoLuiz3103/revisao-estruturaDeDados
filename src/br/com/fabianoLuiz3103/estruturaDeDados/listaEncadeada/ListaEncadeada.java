@@ -92,7 +92,25 @@ public class ListaEncadeada<T> {
         return removido;
     }
 
-
+    public T removeQualquerPosicao(int posicao){
+        if(this.posicaoNaoExiste(posicao,false)){
+            throw new IllegalArgumentException(NAO_EXISTE);
+        }
+        if(posicao == 0){
+            return this.removeInicio();
+        }
+        if(posicao == tamanho-1){
+            return this.removeFim();
+        }
+        No<T> noAnterior = this.buscaPorPosicao(posicao-1);
+        No<T> noAtual  = noAnterior.getProximo();
+        No<T> noPosterior = noAtual.getProximo();
+        T removido = noAtual.getElemento();
+        noAtual = null;
+        noAnterior.setProximo(noPosterior);
+        this.tamanho--;
+        return removido;
+    }
 
     public int getTamanho(){
         return this.tamanho;
