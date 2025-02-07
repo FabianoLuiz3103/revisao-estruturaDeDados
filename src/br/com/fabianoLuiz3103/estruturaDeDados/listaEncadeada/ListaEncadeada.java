@@ -34,6 +34,34 @@ public class ListaEncadeada<T> {
 
     }
 
+    private void adicionaNoIncio(T elemento){
+        if(this.tamanho == 0){
+            No<T> celula = new No<>(elemento);
+            this.inicio = celula;
+            this.ultimo = celula;
+        }else{
+            //lista não está vazia, definir novo ini
+            this.inicio = new No<>(elemento, this.inicio); //inicio antigo vira o próximo do novo nó
+        }
+        this.tamanho++;
+    }
+    public void adiciona(int posicao, T elemento){
+        if(!(posicao >= 0 && posicao <= tamanho)){
+            throw new IllegalArgumentException("\nPosição inválida!");
+        }
+       if(posicao == 0){
+           this.adicionaNoIncio(elemento);
+       } else if(posicao == this.tamanho){
+           this.adiciona(elemento);
+       }else{
+           No<T> noAnterior = this.buscaPorPosicao(posicao-1);
+           No<T> proximoNo = noAnterior.getProximo();
+           No<T> novoNo = new No<>(elemento, proximoNo);
+           noAnterior.setProximo(novoNo);
+           this.tamanho++;
+       }
+    }
+
     public int getTamanho(){
         return this.tamanho;
     }
