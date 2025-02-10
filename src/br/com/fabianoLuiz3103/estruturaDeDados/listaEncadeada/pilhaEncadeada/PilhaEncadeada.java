@@ -1,4 +1,4 @@
-package br.com.fabianoLuiz3103.estruturaDeDados.listaEncadeada.PilhaEncadeada;
+package br.com.fabianoLuiz3103.estruturaDeDados.listaEncadeada.pilhaEncadeada;
 
 import br.com.fabianoLuiz3103.estruturaDeDados.listaEncadeada.ListaEncadeada;
 
